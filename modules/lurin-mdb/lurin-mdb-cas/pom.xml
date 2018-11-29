@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>com.zed.lurin.mdb.cas</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>Message Driven Bean CAS</name>
+
+  <parent>
+    <groupId>com.zed.lurin.mdb</groupId>
+    <artifactId>com.zed.lurin.mdb</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.jbossas</groupId>
+      <artifactId>jboss-as-security</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.mdb</groupId>
+      <artifactId>com.zed.lurin.mdb.api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.mdb</groupId>
+      <artifactId>com.zed.lurin.mdb.core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.process.cas</groupId>
+      <artifactId>com.zed.lurin.process.cas.services</artifactId>
+      <type>ejb</type>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.operators.managment</groupId>
+      <artifactId>com.zed.lurin.operators.managment.services</artifactId>
+      <type>ejb</type>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.parameter</groupId>
+      <artifactId>com.zed.lurin.parameter.services</artifactId>
+      <type>ejb</type>
+    </dependency>
+  </dependencies>
+
+</project>

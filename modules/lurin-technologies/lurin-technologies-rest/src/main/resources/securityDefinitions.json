@@ -1,0 +1,8 @@
+{
+  "bearer_token": {
+    "type": "apiKey",
+    "name": "Authorization",
+    "in": "header",
+    "template": "Bearer {apiKey}"
+  }
+}

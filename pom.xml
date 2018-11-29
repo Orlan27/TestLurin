@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zed.lurin.master</groupId>
+    <artifactId>com.zed.lurin.master</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+
+    <name>Lurin Master</name>
+
+    <organization>
+        <name>zed</name>
+        <url>http://www.zed.com/es</url>
+    </organization>
+
+    <!--PROPERTIES-->
+    <properties>
+        <version.javaee.api>7.0</version.javaee.api>
+        <version.hibernate>5.2.11.Final</version.hibernate>
+        <version.urlrewritefilter>4.0.3</version.urlrewritefilter>
+        <version.jboss.as.security>6.1.0.Final</version.jboss.as.security>
+        <version.junit>4.7</version.junit>
+        <version.log4j>1.2.17</version.log4j>
+        <version.jjwt>0.9.0</version.jjwt>
+        <version.quartz>2.3.0</version.quartz>
+        <version.commons.lang3>3.7</version.commons.lang3>
+        <version.gson>2.2.2</version.gson>
+        <version.io.swagger>1.5.3</version.io.swagger>
+        <version.com.opencsv>4.1</version.com.opencsv>
+        <version.resteasy.multipart.provider>3.0.8.Final</version.resteasy.multipart.provider>
+        <url.swagger.templates>configuration/swagger/templates</url.swagger.templates>
+        <url.swagger.module>modules/lurin-swagger/lurin-swagger-web/src/main/webapp</url.swagger.module>
+        <url.swagger.json.publish>${url.swagger.module}/swagger-ui</url.swagger.json.publish>
+        <url.swagger.html.publish>${url.swagger.module}/html</url.swagger.html.publish>
+        <name.html.swagger.publish>document.html</name.html.swagger.publish>
+        <version.jasperreports>6.1.0</version.jasperreports>
+        <version.commons-digester>2.1</version.commons-digester>
+        <version.org.codehaus.groovy>2.4.13</version.org.codehaus.groovy>
+        <version.commons-beanutils>1.9.3</version.commons-beanutils>
+        <version.commons-logging>1.2</version.commons-logging>
+        <version.org.apache.poi>3.10.1</version.org.apache.poi>
+        <version.jboss.controller>8.2.1.Final</version.jboss.controller>
+        <version.jackson.core>2.9.5</version.jackson.core>
+        <version.common.codec>1.11</version.common.codec>
+    </properties>
+
+    <!--MODULES-->
+    <modules>
+        <module>modules/lurin-domain</module>
+        <module>modules/lurin-commons-utils</module>
+        <module>modules/lurin-security</module>
+        <module>modules/lurin-quartz</module>
+        <module>modules/lurin-mdb</module>
+        <module>modules/lurin-commercial-zones</module>
+        <module>modules/lurin-admin</module>
+        <module>modules/lurin-freeview</module>
+        <module>modules/lurin-campaign</module>
+        <module>modules/lurin-process-cas</module>
+        <module>modules/lurin-carriers</module>
+        <module>modules/lurin-storage-managment</module>
+        <module>modules/lurin-parameter</module>
+        <module>modules/lurin-channelmap</module>
+        <module>modules/lurin-channel-packages</module>
+        <module>modules/lurin-operators-managment</module>
+        <module>modules/lurin-lookfeel-management</module>
+        <module>modules/lurin-technologies</module>
+        <module>modules/lurin-mail</module>
+        <module>modules/lurin-report</module>
+        <module>modules/lurin-messages</module>
+        <module>modules/lurin-type-load</module>
+        <module>modules/lurin-wildfly-manager</module>
+        <module>modules/lurin-master-deploy</module>
+        <module>modules/lurin-swagger</module>
+        <module>modules/lurin-rest-deploy</module>
+        <module>master-ear</module>
+
+        <!--TOOLS-->
+        <!--<module>tools/hibernate</module>-->
+    </modules>
+
+    <!--DEPENDENCIES-->
+    <dependencyManagement>
+        <dependencies>
+            <!--COMMON CODEC-->
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${version.common.codec}</version>
+            </dependency>
+            <!--JACKSON FASTERXML-->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${version.jackson.core}</version>
+            </dependency>
+            <!--JBOOS-->
+            <dependency>
+                <groupId>org.wildfly</groupId>
+                <artifactId>wildfly-controller-client</artifactId>
+                <version>${version.jboss.controller}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${version.org.apache.poi}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${version.org.apache.poi}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml-schemas</artifactId>
+                <version>${version.org.apache.poi}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-digester</groupId>
+                <artifactId>commons-digester</artifactId>
+                <version>${version.commons-digester}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>${version.org.codehaus.groovy}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${version.commons-beanutils}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${version.commons-logging}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>${version.javaee.api}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.jasperreports</groupId>
+                <artifactId>jasperreports</artifactId>
+                <version>${version.jasperreports}</version>
+                <type>jar</type>
+                <scope>compile</scope>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>commons-collections</artifactId>
+                        <groupId>commons-collections</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>commons-beanutils</artifactId>
+                        <groupId>commons-beanutils</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>commons-digester</artifactId>
+                        <groupId>commons-digester</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>commons-logging</artifactId>
+                        <groupId>commons-logging</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+           
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${version.hibernate}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-entitymanager</artifactId>
+                <version>${version.hibernate}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- RESTEasy JAX RS Implementation -->
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-jaxrs</artifactId>
+                <version>${version.resteasy.multipart.provider}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- Resteasy Multipart Provider -->
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-multipart-provider</artifactId>
+                <version>${version.resteasy.multipart.provider}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- Resteasy Servlet Container Initializer -->
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-servlet-initializer</artifactId>
+                <version>${version.resteasy.multipart.provider}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- RESTEasy JAX RS Client -->
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-client</artifactId>
+                <version>${version.resteasy.multipart.provider}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.tuckey</groupId>
+                <artifactId>urlrewritefilter</artifactId>
+                <version>${version.urlrewritefilter}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${version.commons.lang3}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${version.gson}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-core</artifactId>
+                <scope>compile</scope>
+                <version>${version.io.swagger}</version>
+            </dependency>
+
+            <!--QUARTZ-->
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz</artifactId>
+                <version>${version.quartz}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz-jobs</artifactId>
+                <version>${version.quartz}</version>
+            </dependency>
+
+            <!--Single Sing On-->
+            <dependency>
+                <groupId>org.jboss.jbossas</groupId>
+                <artifactId>jboss-as-security</artifactId>
+                <version>${version.jboss.as.security}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!--LOGGER-->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${version.log4j}</version>
+            </dependency>
+
+            <!--JSON Web Tokens-->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${version.jjwt}</version>
+            </dependency>
+                <!--MODULE DOMAIN DTO-->
+            <dependency>
+                <groupId>com.zed.lurin.domain</groupId>
+                <artifactId>com.zed.lurin.domain.dto</artifactId>
+                <version>${project.version}</version>
+            </dependency> 
+            <!--MODULE DOMAIN JPA-->
+            <dependency>
+                <groupId>com.zed.lurin.domain</groupId>
+                <artifactId>com.zed.lurin.domain.jpa</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zed.lurin.domain</groupId>
+                <artifactId>com.zed.lurin.domain.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+
+            <!--PARAMETER-->
+            <dependency>
+                <groupId>com.zed.lurin.parameter</groupId>
+                <artifactId>com.zed.lurin.parameter.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.parameter</groupId>
+                <artifactId>com.zed.lurin.parameter.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--MODULE SECURTY CORE-->
+            <dependency>
+                <groupId>com.zed.lurin.security</groupId>
+                <artifactId>com.zed.lurin.security.core</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zed.lurin.security</groupId>
+                <artifactId>com.zed.lurin.security.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zed.lurin.security</groupId>
+                <artifactId>com.zed.lurin.security.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--Commercial Zones-->
+            <dependency>
+                <groupId>com.zed.lurin.commercial.zones</groupId>
+                <artifactId>com.zed.lurin.commercial.zones.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.commercial.zones</groupId>
+                <artifactId>com.zed.lurin.commercial.zones.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--Channel Map-->
+            <dependency>
+                <groupId>com.zed.lurin.channelmap</groupId>
+                <artifactId>com.zed.lurin.channelmap.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.channelmap</groupId>
+                <artifactId>com.zed.lurin.channelmap.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--MODULE FREEVIEW-->
+            <dependency>
+                <groupId>com.zed.lurin.freeview</groupId>
+                <artifactId>com.zed.lurin.freeview.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.freeview</groupId>
+                <artifactId>com.zed.lurin.freeview.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.freeview</groupId>
+                <artifactId>com.zed.lurin.freeview.web</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--CAMPAIGN-->
+            <dependency>
+                <groupId>com.zed.lurin.campaign</groupId>
+                <artifactId>com.zed.lurin.campaign.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.campaign</groupId>
+                <artifactId>com.zed.lurin.campaign.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--ADMIN MODULE-->
+            <dependency>
+                <groupId>com.zed.lurin.admin</groupId>
+                <artifactId>com.zed.lurin.admin.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zed.lurin.admin</groupId>
+                <artifactId>com.zed.lurin.admin.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zed.lurin.admin</groupId>
+                <artifactId>com.zed.lurin.admin.web</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--MESSAGE DRIVEN BEAN-->
+            <dependency>
+                <groupId>com.zed.lurin.mdb</groupId>
+                <artifactId>com.zed.lurin.mdb.api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.mdb</groupId>
+                <artifactId>com.zed.lurin.mdb.core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.mdb</groupId>
+                <artifactId>com.zed.lurin.mdb.cas</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.mdb</groupId>
+                <artifactId>com.zed.lurin.mdb.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+
+            <!--QUARTZ MODULE-->
+            <dependency>
+                <groupId>com.zed.lurin.quartz</groupId>
+                <artifactId>com.zed.lurin.quartz.core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.quartz</groupId>
+                <artifactId>com.zed.lurin.quartz.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.quartz</groupId>
+                <artifactId>com.zed.lurin.quartz.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--WAR MODULE DEPLOY-->
+            <dependency>
+                <groupId>com.zed.lurin.master.deploy</groupId>
+                <artifactId>com.zed.lurin.master.deploy.web</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+            <!--REST MODULE DEPLOY-->
+            <dependency>
+                <groupId>com.zed.lurin.rest.deploy</groupId>
+                <artifactId>com.zed.lurin.rest.deploy</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+			
+            <!--MODULE COMMONS> -->
+            <dependency>
+                <groupId>com.zed.lurin.commons</groupId>
+                <artifactId>com.zed.lurin.commons.utils</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+
+            <!--SWAGGER MODULE DEPLOY-->
+            <dependency>
+                <groupId>com.zed.lurin.swagger</groupId>
+                <artifactId>com.zed.lurin.swagger.web</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+            <!-- MODULE PROCESS CAS-->
+            <dependency>
+                <groupId>com.zed.lurin.process.cas</groupId>
+                <artifactId>com.zed.lurin.process.cas.core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.process.cas</groupId>
+                <artifactId>com.zed.lurin.process.cas.socket</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.process.cas</groupId>
+                <artifactId>com.zed.lurin.process.cas.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <!--CARRIES MODULE-->
+            <dependency>
+                <groupId>com.zed.lurin.carriers</groupId>
+                <artifactId>com.zed.lurin.carriers.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <!--MODULE STORAGE MANAGMENT-->
+            <dependency>
+                <groupId>com.zed.lurin.storage.managment</groupId>
+                <artifactId>com.zed.lurin.storage.managment.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.storage.managment</groupId>
+                <artifactId>com.zed.lurin.storage.managment.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.storage.managment</groupId>
+                <artifactId>com.zed.lurin.storage.managment.web</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--CHANNEL PACKAGES-->
+            <dependency>
+                <groupId>com.zed.lurin.channel.packages</groupId>
+                <artifactId>com.zed.lurin.channel.packages.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.channel.packages</groupId>
+                <artifactId>com.zed.lurin.channel.packages.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+            
+            <!--MODULE OPERATORS MANAGMENT-->
+            <dependency>
+                <groupId>com.zed.lurin.operators.managment</groupId>
+                <artifactId>com.zed.lurin.operators.managment.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.operators.managment</groupId>
+                <artifactId>com.zed.lurin.operators.managment.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.operators.managment</groupId>
+                <artifactId>com.zed.lurin.operators.managment.web</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--LOOK AND FEEL PACKAGES-->
+            <dependency>
+                <groupId>com.zed.lurin.lookfeel.management</groupId>
+                <artifactId>com.zed.lurin.lookfeel.management.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.lookfeel.management</groupId>
+                <artifactId>com.zed.lurin.lookfeel.management.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--MAIL-->
+            <dependency>
+                <groupId>com.zed.lurin.mail</groupId>
+                <artifactId>com.zed.lurin.mail.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+
+            <!--TECHNOLOGIES-->
+            <dependency>
+                <groupId>com.zed.lurin.technologies</groupId>
+                <artifactId>com.zed.lurin.technologies.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.technologies</groupId>
+                <artifactId>com.zed.lurin.technologies.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--MODULE SERVICE REPORT-->
+            <dependency>
+                <groupId>com.zed.lurin.report</groupId>
+                <artifactId>com.zed.lurin.report.service</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <!--MODULE REST REPORT-->
+            <dependency>
+                <groupId>com.zed.lurin.report</groupId>
+                <artifactId>com.zed.lurin.report.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!--MESSAGES PROJECT-->
+            <dependency>
+                <groupId>com.zed.lurin.messages</groupId>
+                <artifactId>com.zed.lurin.messages.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zed.lurin.messages</groupId>
+                <artifactId>com.zed.lurin.messages.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+
+            <!--WILDFLY MANAGER-->
+            <dependency>
+                <groupId>com.zed.lurin.wildfly.manager</groupId>
+                <artifactId>com.zed.lurin.wildfly.manager.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+
+            <!--Type Load-->
+            <dependency>
+                <groupId>com.zed.lurin.type.load</groupId>
+                <artifactId>com.zed.lurin.type.load.services</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>com.zed.lurin.type.load</groupId>
+                <artifactId>com.zed.lurin.type.load.rest</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <!-- Test -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${version.junit}</version>
+                <scope>test</scope>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+
+    <!--BUILD-->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.5.1</version>
+                    <configuration>
+                        <source>8</source>
+                        <target>8</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

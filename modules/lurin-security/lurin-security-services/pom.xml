@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>com.zed.lurin.security.services</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>Security API Services</name>
+
+  <parent>
+    <groupId>com.zed.lurin.security</groupId>
+    <artifactId>com.zed.lurin.security</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.jbossas</groupId>
+      <artifactId>jboss-as-security</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.jsonwebtoken</groupId>
+      <artifactId>jjwt</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.domain</groupId>
+      <artifactId>com.zed.lurin.domain.jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.domain</groupId>
+      <artifactId>com.zed.lurin.domain.dto</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.domain</groupId>
+      <artifactId>com.zed.lurin.domain.services</artifactId>
+      <type>ejb</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.parameter</groupId>
+      <artifactId>com.zed.lurin.parameter.services</artifactId>
+      <type>ejb</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.quartz-scheduler</groupId>
+      <artifactId>quartz</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.quartz-scheduler</groupId>
+      <artifactId>quartz-jobs</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.security</groupId>
+      <artifactId>com.zed.lurin.security.core</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.carriers</groupId>
+      <artifactId>com.zed.lurin.carriers.services</artifactId>
+      <type>ejb</type>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+    </dependency>
+      <!--MAIL-->
+    <dependency>
+        <groupId>com.zed.lurin.mail</groupId>
+        <artifactId>com.zed.lurin.mail.services</artifactId>
+        <type>ejb</type>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.lookfeel.management</groupId>
+      <artifactId>com.zed.lurin.lookfeel.management.services</artifactId>
+      <type>ejb</type>
+    </dependency>
+
+  </dependencies>
+
+</project>

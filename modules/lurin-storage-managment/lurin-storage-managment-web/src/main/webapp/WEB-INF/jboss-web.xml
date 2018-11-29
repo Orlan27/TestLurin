@@ -1,0 +1,3 @@
+<jboss-web>
+    <security-domain flushOnSessionInvalidation="true" >sso</security-domain>
+</jboss-web>

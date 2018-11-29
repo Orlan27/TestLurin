@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence
+        version="2.0"
+        xmlns="http://java.sun.com/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+>
+
+    <persistence-unit name="lurin-security-em">
+        <jta-data-source>java:/SEC_DS</jta-data-source>
+        <class>com.zed.lurin.domain.jpa.CarrierDataSourcesId</class>
+        <class>com.zed.lurin.domain.jpa.CarrierDataSources</class>
+        <class>com.zed.lurin.domain.jpa.Carriers</class>
+        <class>com.zed.lurin.domain.jpa.Companies</class>
+        <class>com.zed.lurin.domain.jpa.ConnectionType</class>
+        <class>com.zed.lurin.domain.jpa.Countries</class>
+        <class>com.zed.lurin.domain.jpa.DataSources</class>
+        <class>com.zed.lurin.domain.jpa.ResetUserPass</class>
+        <class>com.zed.lurin.domain.jpa.Roles</class>
+        <class>com.zed.lurin.domain.jpa.CategoriesRoles</class>
+        <class>com.zed.lurin.domain.jpa.SecurityCategoryStatus</class>
+        <class>com.zed.lurin.domain.jpa.SourceType</class>
+        <class>com.zed.lurin.domain.jpa.Tables</class>
+        <class>com.zed.lurin.domain.jpa.ThemesDetails</class>
+        <class>com.zed.lurin.domain.jpa.Themes</class>
+        <class>com.zed.lurin.domain.jpa.UserCarriers</class>
+        <class>com.zed.lurin.domain.jpa.UserCarriersRoles</class>
+        <class>com.zed.lurin.domain.jpa.UserCarriersRolesId</class>
+        <class>com.zed.lurin.domain.jpa.UsersControlAccess</class>
+        <class>com.zed.lurin.domain.jpa.Users</class>
+        <class>com.zed.lurin.domain.jpa.CategoryTechnologies</class>
+        <class>com.zed.lurin.domain.jpa.Profile</class>
+        <class>com.zed.lurin.domain.jpa.CategoriesProfile</class>
+        <class>com.zed.lurin.domain.jpa.ProfileRoles</class>
+        <class>com.zed.lurin.domain.jpa.Dictionary</class>
+        <class>com.zed.lurin.domain.jpa.Columns</class>
+        <class>com.zed.lurin.domain.jpa.view.CarriersByUserNameView</class>
+        <class>com.zed.lurin.domain.jpa.view.DataSourceUserTokenView</class>
+        <class>com.zed.lurin.domain.jpa.view.MenuByUserNameView</class>
+        <class>com.zed.lurin.domain.jpa.view.RolesByUserNameView</class>
+        <class>com.zed.lurin.domain.jpa.view.UserExpiredPasswordView</class>
+        <class>com.zed.lurin.domain.jpa.view.OnlyCarriersByUserNameView</class>
+        <class>com.zed.lurin.domain.jpa.view.DataSourcesAvailableView</class>
+        <class>com.zed.lurin.domain.jpa.view.ThemesDetailsView</class>
+        <properties>
+            <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.format_sql" value="false" />
+            <property name="hibernate.use_sql_comments" value="false" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+            <property name="hibernate.id.new_generator_mappings" value="false" />
+            <property name="hibernate.jdbc.batch_size" value="20"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.integration.envers.enabled" value="false" />
+            <property name="hibernate.envers.autoRegisterListeners" value="false" />
+            <property name="hibernate.enable_lazy_load_no_trans" value="true" />
+            <!--<property name="hibernate.cache.use_query_cache" value="false" />-->
+        </properties>
+    </persistence-unit>
+
+</persistence>

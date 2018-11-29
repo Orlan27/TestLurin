@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zed.lurin.rest.deploy</groupId>
+    <artifactId>com.zed.lurin.rest.deploy</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>war</packaging>
+
+    <name>Desploy Rests Services</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+        </dependency>
+        <!--REST SECURITY-->
+        <dependency>
+            <groupId>com.zed.lurin.security</groupId>
+            <artifactId>com.zed.lurin.security.rest</artifactId>
+            <type>war</type>
+        </dependency>
+        <!--REST Commercial Zones-->
+        <dependency>
+            <groupId>com.zed.lurin.commercial.zones</groupId>
+            <artifactId>com.zed.lurin.commercial.zones.rest</artifactId>
+            <type>war</type>
+        </dependency>
+        <!--REST FreeView-->
+        <dependency>
+            <groupId>com.zed.lurin.freeview</groupId>
+            <artifactId>com.zed.lurin.freeview.rest</artifactId>
+            <type>war</type>
+        </dependency>
+        <!--CAMPAIGN-->
+        <dependency>
+            <groupId>com.zed.lurin.campaign</groupId>
+            <artifactId>com.zed.lurin.campaign.rest</artifactId>
+            <type>war</type>
+        </dependency>
+
+        <!--REST StorageManagment-->
+        <dependency>
+            <groupId>com.zed.lurin.storage.managment</groupId>
+            <artifactId>com.zed.lurin.storage.managment.rest</artifactId>
+            <type>war</type>
+        </dependency>
+        <!--REST Admin-->
+        <dependency>
+            <groupId>com.zed.lurin.admin</groupId>
+            <artifactId>com.zed.lurin.admin.rest</artifactId>
+            <type>war</type>
+        </dependency>
+
+        <!--REST Quartz-->
+        <!--DEPRECATED DELETE-->
+        <!--<dependency>-->
+            <!--<groupId>com.zed.lurin.quartz</groupId>-->
+            <!--<artifactId>com.zed.lurin.quartz.rest</artifactId>-->
+            <!--<type>war</type>-->
+        <!--</dependency>-->
+
+        <!--REST Commercial Zones-->
+        <dependency>
+            <groupId>com.zed.lurin.channelmap</groupId>
+            <artifactId>com.zed.lurin.channelmap.rest</artifactId>
+            <type>war</type>
+        </dependency>
+
+        <!--REST Channel Packages -->
+        <dependency>
+            <groupId>com.zed.lurin.channel.packages</groupId>
+            <artifactId>com.zed.lurin.channel.packages.rest</artifactId>
+            <type>war</type>
+        </dependency>
+
+	<!--REST OperatorsManagment-->
+        <dependency>
+            <groupId>com.zed.lurin.operators.managment</groupId>
+            <artifactId>com.zed.lurin.operators.managment.rest</artifactId>
+            <type>war</type>
+        </dependency>
+        
+        <!--REST Global Parameters -->
+        <dependency>
+            <groupId>com.zed.lurin.parameter</groupId>
+            <artifactId>com.zed.lurin.parameter.rest</artifactId>
+            <type>war</type>
+        </dependency>
+
+        <!--REST Look and feel Management -->
+        <dependency>
+            <groupId>com.zed.lurin.lookfeel.management</groupId>
+            <artifactId>com.zed.lurin.lookfeel.management.rest</artifactId>
+            <type>war</type>
+        </dependency>
+
+        <!--TECHNOLOGIES-->
+        <dependency>
+            <groupId>com.zed.lurin.technologies</groupId>
+            <artifactId>com.zed.lurin.technologies.rest</artifactId>
+            <type>war</type>
+        </dependency>
+         <!--MODULE REST REPORT-->
+        <dependency>
+            <groupId>com.zed.lurin.report</groupId>
+            <artifactId>com.zed.lurin.report.rest</artifactId>
+             <type>war</type>
+        </dependency>
+        <!--MESSAGES-->
+        <dependency>
+            <groupId>com.zed.lurin.messages</groupId>
+            <artifactId>com.zed.lurin.messages.rest</artifactId>
+            <type>war</type>
+        </dependency>
+
+        <!--TYPE LOAD-->
+        <dependency>
+            <groupId>com.zed.lurin.type.load</groupId>
+            <artifactId>com.zed.lurin.type.load.rest</artifactId>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+    <parent>
+        <groupId>com.zed.lurin.master</groupId>
+        <artifactId>com.zed.lurin.master</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+
+    <!--BUILD-->
+
+    <build>
+        <finalName>api_rest</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.1.1</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

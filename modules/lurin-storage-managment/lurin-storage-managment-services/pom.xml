@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.zed.lurin.storage.managment</groupId>
+  <artifactId>com.zed.lurin.storage.managment.services</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>Storage Managment Services Module</name>
+
+  <parent>
+    <groupId>com.zed.lurin.storage.managment</groupId>
+    <artifactId>com.zed.lurin.storage.managment</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.domain</groupId>
+      <artifactId>com.zed.lurin.domain.jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.domain</groupId>
+      <artifactId>com.zed.lurin.domain.dto</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.domain</groupId>
+      <artifactId>com.zed.lurin.domain.services</artifactId>
+      <scope>provided</scope>
+      <type>ejb</type>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.security</groupId>
+      <artifactId>com.zed.lurin.security.services</artifactId>
+      <scope>provided</scope>
+      <type>ejb</type>
+    </dependency>
+    <!--WILDFLY MANAGER-->
+    <dependency>
+      <groupId>com.zed.lurin.wildfly.manager</groupId>
+      <artifactId>com.zed.lurin.wildfly.manager.services</artifactId>
+      <scope>provided</scope>
+      <type>ejb</type>
+    </dependency>
+    <dependency>
+      <groupId>com.zed.lurin.parameter</groupId>
+      <artifactId>com.zed.lurin.parameter.services</artifactId>
+      <type>ejb</type>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Dependencies>com.oracle.ojdbc7</Dependencies>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

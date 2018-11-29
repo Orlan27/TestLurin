@@ -1,0 +1,4 @@
+{
+  "/lurin-rest-spring-security/service/*": "/$1",
+  "/api/rest/commercial/*": "/$1"
+}

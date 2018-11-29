@@ -1,0 +1,390 @@
+{
+  "login": {},
+  "create": {},
+  "update": {},
+  "delete": {
+    "zone": 2,
+    "commercialZone": "Venezuela",
+    "status": "A"
+  },
+  "show": [
+    {
+      "zone": 2,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 3,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 4,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 5,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 6,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 7,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 8,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 9,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 10,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 11,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 12,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 13,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 12,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 14,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 15,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 16,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 17,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 30,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 20,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 23,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 32,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 34,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 26,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 38,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 29,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 43,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 42,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 19,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 18,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 25,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 52,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 27,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 47,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 44,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 56,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 55,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 57,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 58,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 59,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 64,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 66,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 68,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 69,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 62,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 63,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 74,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 72,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 73,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 75,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 65,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 64,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 63,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    },
+    {
+      "zone": 62,
+      "commercialZone": "Venezuela",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "I"
+    },
+    {
+      "zone": 51,
+      "commercialZone": "panama",
+      "packages":"Paquete 1, Paquete 2",
+      "technology":"DTH",
+      "status": "A"
+    }
+  ]
+}

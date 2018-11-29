@@ -1,0 +1,124 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+	<display-name>Web App Master</display-name>
+
+	<filter>
+		<filter-name>PostLoginFilter</filter-name>
+		<filter-class>com.zed.master.deploy.filter.PostLoginFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>PostLoginFilter</filter-name>
+		<url-pattern>/index.html</url-pattern>
+		<url-pattern>/favicon.ico</url-pattern>
+	</filter-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<security-role>
+		<role-name>admin</role-name>
+	</security-role>
+	<security-role>
+		<role-name>admin_local</role-name>
+	</security-role>
+	<security-role>
+		<role-name>freeview</role-name>
+	</security-role>
+	<security-role>
+		<role-name>campaign</role-name>
+	</security-role>
+	<security-role>
+		<role-name>freeview_report</role-name>
+	</security-role>
+	<security-role>
+		<role-name>campaign_report</role-name>
+	</security-role>
+	<security-role>
+		<role-name>store_management</role-name>
+	</security-role>
+	<security-role>
+		<role-name>operator_management</role-name>
+	</security-role>
+	<security-role>
+		<role-name>profile_management</role-name>
+	</security-role>
+	<security-role>
+		<role-name>user_administration</role-name>
+	</security-role>
+	<security-role>
+		<role-name>security_politics</role-name>
+	</security-role>
+	<security-role>
+		<role-name>global_parameters</role-name>
+	</security-role>
+	<security-role>
+		<role-name>themes_administration</role-name>
+	</security-role>
+
+	<!--ALLOW-->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>ALLOW URLS</web-resource-name>
+			<url-pattern>/js/*</url-pattern>
+			<url-pattern>/img/*</url-pattern>
+			<url-pattern>/css/*</url-pattern>
+			<url-pattern>/logout</url-pattern>
+			<url-pattern>/recoverpass</url-pattern>
+			<url-pattern>/retrievepassword.jsp</url-pattern>
+		</web-resource-collection>
+	</security-constraint>
+
+	<!--BLOCK-->
+	<security-constraint>
+		<display-name>Web App Master</display-name>
+		<web-resource-collection>
+			<web-resource-name>Web App Master</web-resource-name>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+			<role-name>admin_local</role-name>
+			<role-name>freeview</role-name>
+			<role-name>campaign</role-name>
+			<role-name>freeview_report</role-name>
+			<role-name>campaign_report</role-name>
+			<role-name>store_management</role-name>
+			<role-name>operator_management</role-name>
+			<role-name>profile_management</role-name>
+			<role-name>user_administration</role-name>
+			<role-name>security_politics</role-name>
+			<role-name>global_parameters</role-name>
+			<role-name>themes_administration</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<transport-guarantee>NONE</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/login.jsp</form-login-page>
+			<form-error-page>/login.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+	<servlet>
+		<servlet-name>recoverpassword-servlet</servlet-name>
+		<servlet-class>com.zed.master.deploy.servlet.RecoverPasswordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>recoverpassword-servlet</servlet-name>
+		<url-pattern>/recoverpass</url-pattern>
+	</servlet-mapping>
+
+</web-app>

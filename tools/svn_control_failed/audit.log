@@ -1,0 +1,4 @@
+debido a error de revert se genero una copia desde un backup a un nuevo remote folder desde la revison 432
+usando el comando
+svn copy -r 432 http://vps114595.vps.ovh.ca/svn/MNLA/branches/lurin-master-backup http://vps114595.vps.ovh.ca/svn/MNLA/branches/lurin-master
+

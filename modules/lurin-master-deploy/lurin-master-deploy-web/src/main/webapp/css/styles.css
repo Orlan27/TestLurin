@@ -1,0 +1,65 @@
+body {
+    background-color: #003346;
+}
+
+.content{
+	position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 80%;
+}
+
+.logo {
+    height: 100%;
+    width: 100%;
+}
+
+.panel-header-bg {
+    background-color: #ECEFF1 !important;
+    border-color: #ECEFF1 !important;
+    background-image: none !important;
+    color: #000000 !important;
+}
+
+.btn-login {
+    background-color: #002D36;
+    border-color: #002D36;
+    background-image: none;
+}
+
+.div-icon-user {
+    background-image: url("../img/usuario32.png");
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+}
+
+.div-icon-pwd {
+    background-image: url("../img/lock32.png");
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+}
+
+.rm-ph {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+@media (max-width: 575px) {  
+    .content {
+        width: 80%;   
+        height: 80%; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {  
+    .content {
+        width: 60%;   
+        height: 60%; 
+    }
+}

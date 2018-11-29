@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zed.lurin.master</groupId>
+    <artifactId>com.zed.lurin.master.ear</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>ear</packaging>
+
+
+    <name>Lurin Master EAR</name>
+    <parent>
+        <groupId>com.zed.lurin.master</groupId>
+        <artifactId>com.zed.lurin.master</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+
+    <organization>
+        <name>zed</name>
+        <url>http://www.zed.com/es</url>
+    </organization>
+
+
+    <dependencies>
+        <!--SECURITY CORE-->
+        <dependency>
+            <groupId>com.zed.lurin.security</groupId>
+            <artifactId>com.zed.lurin.security.core</artifactId>
+            <type>jar</type>
+        </dependency>
+        <!--PARAMETER-->
+        <dependency>
+            <groupId>com.zed.lurin.parameter</groupId>
+            <artifactId>com.zed.lurin.parameter.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+        <!--Domain Services-->
+        <dependency>
+            <groupId>com.zed.lurin.domain</groupId>
+            <artifactId>com.zed.lurin.domain.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <!--Commercial Zones-->
+        <dependency>
+            <groupId>com.zed.lurin.commercial.zones</groupId>
+            <artifactId>com.zed.lurin.commercial.zones.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <!--FreeView-->
+        <dependency>
+            <groupId>com.zed.lurin.freeview</groupId>
+            <artifactId>com.zed.lurin.freeview.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>com.zed.lurin.freeview</groupId>
+            <artifactId>com.zed.lurin.freeview.web</artifactId>
+            <type>war</type>
+        </dependency>
+
+        <!--CAMPAIGN-->
+        <dependency>
+            <groupId>com.zed.lurin.campaign</groupId>
+            <artifactId>com.zed.lurin.campaign.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>com.zed.lurin.campaign</groupId>
+            <artifactId>com.zed.lurin.campaign.rest</artifactId>
+            <type>war</type>
+        </dependency>
+
+        <!--Storage Managment-->
+        <dependency>
+            <groupId>com.zed.lurin.storage.managment</groupId>
+            <artifactId>com.zed.lurin.storage.managment.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>com.zed.lurin.storage.managment</groupId>
+            <artifactId>com.zed.lurin.storage.managment.web</artifactId>
+            <type>war</type>
+        </dependency>
+        
+        <!--Admin module-->
+        <dependency>
+            <groupId>com.zed.lurin.admin</groupId>
+            <artifactId>com.zed.lurin.admin.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>com.zed.lurin.admin</groupId>
+            <artifactId>com.zed.lurin.admin.rest</artifactId>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.zed.lurin.admin</groupId>
+            <artifactId>com.zed.lurin.admin.web</artifactId>
+            <type>war</type>
+        </dependency>
+
+        <!--Quartz-->
+        <dependency>
+            <groupId>com.zed.lurin.quartz</groupId>
+            <artifactId>com.zed.lurin.quartz.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zed.lurin.quartz</groupId>
+            <artifactId>com.zed.lurin.quartz.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <!--MESSAGE DRIVEN BEAN-->
+        <dependency>
+            <groupId>com.zed.lurin.mdb</groupId>
+            <artifactId>com.zed.lurin.mdb.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zed.lurin.mdb</groupId>
+            <artifactId>com.zed.lurin.mdb.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zed.lurin.mdb</groupId>
+            <artifactId>com.zed.lurin.mdb.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>com.zed.lurin.mdb</groupId>
+            <artifactId>com.zed.lurin.mdb.cas</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <!--MASTER WAR DEPLOY-->
+        <dependency>
+            <groupId>com.zed.lurin.master.deploy</groupId>
+            <artifactId>com.zed.lurin.master.deploy.web</artifactId>
+            <type>war</type>
+        </dependency>
+        <!--DEPLOY REST-->
+        <dependency>
+            <groupId>com.zed.lurin.rest.deploy</groupId>
+            <artifactId>com.zed.lurin.rest.deploy</artifactId>
+            <type>war</type>
+        </dependency>
+
+        <!--SWAGGER MODULE DEPLOY-->
+        <dependency>
+            <groupId>com.zed.lurin.swagger</groupId>
+            <artifactId>com.zed.lurin.swagger.web</artifactId>
+            <type>war</type>
+        </dependency>
+
+        <!--CARRIES MODULE-->
+        <dependency>
+            <groupId>com.zed.lurin.carriers</groupId>
+            <artifactId>com.zed.lurin.carriers.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <!--CHANNEL MODULE-->
+        <dependency>
+            <groupId>com.zed.lurin.channelmap</groupId>
+            <artifactId>com.zed.lurin.channelmap.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <!--CHANNEL PACKAGES-->
+        <dependency>
+            <groupId>com.zed.lurin.channel.packages</groupId>
+            <artifactId>com.zed.lurin.channel.packages.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <!--Operators Managment-->
+        <dependency>
+            <groupId>com.zed.lurin.operators.managment</groupId>
+            <artifactId>com.zed.lurin.operators.managment.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.zed.lurin.operators.managment</groupId>-->
+            <!--<artifactId>com.zed.lurin.operators.managment.web</artifactId>-->
+            <!--<type>war</type>-->
+        <!--</dependency>-->
+
+        <!--MAIL-->
+        <dependency>
+            <groupId>com.zed.lurin.mail</groupId>
+            <artifactId>com.zed.lurin.mail.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <!--Look anf Feel Management-->
+        <dependency>
+            <groupId>com.zed.lurin.lookfeel.management</groupId>
+            <artifactId>com.zed.lurin.lookfeel.management.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <!--TECHNOLOGIES-->
+        <dependency>
+            <groupId>com.zed.lurin.technologies</groupId>
+            <artifactId>com.zed.lurin.technologies.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+            
+        <!--MODULE SERVICE REPORT-->
+        <dependency>
+            <groupId>com.zed.lurin.report</groupId>
+            <artifactId>com.zed.lurin.report.service</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <!--MESSAGES PROJECT-->
+        <dependency>
+            <groupId>com.zed.lurin.messages</groupId>
+            <artifactId>com.zed.lurin.messages.rest</artifactId>
+            <type>war</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zed.lurin.messages</groupId>
+            <artifactId>com.zed.lurin.messages.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <!--WILDFLY MANAGER-->
+        <dependency>
+            <groupId>com.zed.lurin.wildfly.manager</groupId>
+            <artifactId>com.zed.lurin.wildfly.manager.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.zed.lurin.process.cas</groupId>
+            <artifactId>com.zed.lurin.process.cas.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+
+        <!--TYPE LOAD-->
+        <dependency>
+            <groupId>com.zed.lurin.type.load</groupId>
+            <artifactId>com.zed.lurin.type.load.services</artifactId>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>com.zed.lurin.type.load</groupId>
+            <artifactId>com.zed.lurin.type.load.rest</artifactId>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+    <!--BUILD-->
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.8</version>
+                <configuration>
+                    <finalName>lurin</finalName>
+                    <defaultLibBundleDir>lib/</defaultLibBundleDir>
+                    <skinnyWars>true</skinnyWars>
+                    <archive>
+                        <manifestEntries>
+                            <Signature-Version>${project.version}</Signature-Version>
+                        </manifestEntries>
+                    </archive>
+                    <modules>
+                        <ejbModule>
+                            <groupId>com.zed.lurin.report</groupId>
+                            <artifactId>com.zed.lurin.report.service</artifactId>
+                            <bundleFileName>com.zed.lurin.report.service.jar</bundleFileName>
+                        </ejbModule>
+                    
+                        <!--CORE SECURITY-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.security</groupId>
+                            <artifactId>com.zed.lurin.security.services</artifactId>
+                            <bundleFileName>com.zed.lurin.security.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--PARAMETER-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.parameter</groupId>
+                            <artifactId>com.zed.lurin.parameter.services</artifactId>
+                            <bundleFileName>com.zed.lurin.parameter.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--DOMAIN SERVICES STATUS-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.domain</groupId>
+                            <artifactId>com.zed.lurin.domain.services</artifactId>
+                            <bundleFileName>com.zed.lurin.domain.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--Commercial Zones-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.commercial.zones</groupId>
+                            <artifactId>com.zed.lurin.commercial.zones.services</artifactId>
+                            <bundleFileName>com.zed.lurin.commercial.zones.services.jar</bundleFileName>
+                        </ejbModule>
+                        <!--FreeView-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.freeview</groupId>
+                            <artifactId>com.zed.lurin.freeview.services</artifactId>
+                            <bundleFileName>com.zed.lurin.freeview.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--CAMPAING-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.campaign</groupId>
+                            <artifactId>com.zed.lurin.campaign.services</artifactId>
+                            <bundleFileName>com.zed.lurin.campaign.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--Storage Managment-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.storage.managment</groupId>
+                            <artifactId>com.zed.lurin.storage.managment.services</artifactId>
+                            <bundleFileName>com.zed.lurin.storage.managment.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--MESSAGE DRIVEN BEAN-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.mdb</groupId>
+                            <artifactId>com.zed.lurin.mdb.services</artifactId>
+                            <bundleFileName>com.zed.lurin.mdb.services.jar</bundleFileName>
+                        </ejbModule>
+                        <ejbModule>
+                            <groupId>com.zed.lurin.mdb</groupId>
+                            <artifactId>com.zed.lurin.mdb.cas</artifactId>
+                            <bundleFileName>com.zed.lurin.mdb.cas.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--Quartz-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.quartz</groupId>
+                            <artifactId>com.zed.lurin.quartz.services</artifactId>
+                            <bundleFileName>com.zed.lurin.quartz.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--CARRIES MODULE-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.carriers</groupId>
+                            <artifactId>com.zed.lurin.carriers.services</artifactId>
+                            <bundleFileName>com.zed.lurin.carriers.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--ADMIN MODULE-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.admin</groupId>
+                            <artifactId>com.zed.lurin.admin.services</artifactId>
+                            <bundleFileName>com.zed.lurin.admin.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--CHANNEL MODULE-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.channelmap</groupId>
+                            <artifactId>com.zed.lurin.channelmap.services</artifactId>
+                            <bundleFileName>com.zed.lurin.channelmap.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <ejbModule>
+                            <groupId>com.zed.lurin.channel.packages</groupId>
+                            <artifactId>com.zed.lurin.channel.packages.services</artifactId>
+                            <bundleFileName>com.zed.lurin.channel.packages.services.jar</bundleFileName>
+                        </ejbModule>
+                        <!--Operators Managment module-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.operators.managment</groupId>
+                            <artifactId>com.zed.lurin.operators.managment.services</artifactId>
+                            <bundleFileName>com.zed.lurin.operators.managment.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--MAIL-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.mail</groupId>
+                            <artifactId>com.zed.lurin.mail.services</artifactId>
+                            <bundleFileName>com.zed.lurin.mail.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--Look and Feel Management module-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.lookfeel.management</groupId>
+                            <artifactId>com.zed.lurin.lookfeel.management.services</artifactId>
+                            <bundleFileName>com.zed.lurin.lookfeel.management.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <!--MESSAGES SERVICES-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.messages</groupId>
+                            <artifactId>com.zed.lurin.messages.services</artifactId>
+                            <bundleFileName>com.zed.lurin.messages.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <ejbModule>
+                            <groupId>com.zed.lurin.type.load</groupId>
+                            <artifactId>com.zed.lurin.type.load.services</artifactId>
+                            <bundleFileName>com.zed.lurin.type.load.services.jar</bundleFileName>
+                        </ejbModule>
+
+
+                        <!--WILDFLY MANAGER-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.wildfly.manager</groupId>
+                            <artifactId>com.zed.lurin.wildfly.manager.services</artifactId>
+                            <bundleFileName>com.zed.lurin.wildfly.manager.services.jar</bundleFileName>
+                        </ejbModule>
+
+
+                        <!--CAS SERVICES-->
+                        <ejbModule>
+                            <groupId>com.zed.lurin.process.cas</groupId>
+                            <artifactId>com.zed.lurin.process.cas.services</artifactId>
+                            <bundleFileName>com.zed.lurin.process.cas.services.jar</bundleFileName>
+                        </ejbModule>
+
+                        <webModule>
+                            <groupId>com.zed.lurin.master.deploy</groupId>
+                            <artifactId>com.zed.lurin.master.deploy.web</artifactId>
+                            <bundleFileName>com.zed.lurin.master.deploy.web.war</bundleFileName>
+                            <contextRoot>/</contextRoot>
+                        </webModule>
+
+                        <webModule>
+                            <groupId>com.zed.lurin.freeview</groupId>
+                            <artifactId>com.zed.lurin.freeview.web</artifactId>
+                            <bundleFileName>com.zed.lurin.freeview.web.war</bundleFileName>
+                            <contextRoot>/freeview</contextRoot>
+                        </webModule>
+                    
+                        <webModule>
+                            <groupId>com.zed.lurin.storage.managment</groupId>
+                            <artifactId>com.zed.lurin.storage.managment.web</artifactId>
+                            <bundleFileName>com.zed.lurin.storage.managment.web.war</bundleFileName>
+                            <contextRoot>/globalmanagement</contextRoot>
+                        </webModule>
+
+                        <webModule>
+                            <groupId>com.zed.lurin.admin</groupId>
+                            <artifactId>com.zed.lurin.admin.web</artifactId>
+                            <bundleFileName>com.zed.lurin.admin.web.war</bundleFileName>
+                            <contextRoot>/admin</contextRoot>
+                        </webModule>
+                        <!--Operators Managment-->
+                        <!--<webModule>-->
+                            <!--<groupId>com.zed.lurin.operators.managment</groupId>-->
+                            <!--<artifactId>com.zed.lurin.operators.managment.web</artifactId>-->
+                            <!--<bundleFileName>com.zed.lurin.operators.managment.web.war</bundleFileName>-->
+                            <!--<contextRoot>/operatorsmanagment</contextRoot>-->
+                        <!--</webModule>-->
+                        <!--DEPLOY REST-->
+                        <webModule>
+                            <groupId>com.zed.lurin.rest.deploy</groupId>
+                            <artifactId>com.zed.lurin.rest.deploy</artifactId>
+                            <bundleFileName>com.zed.lurin.rest.deploy.war</bundleFileName>
+                            <contextRoot>/api</contextRoot>
+                        </webModule>
+
+                        <!--SWAGGER REST-->
+                        <webModule>
+                            <groupId>com.zed.lurin.swagger</groupId>
+                            <artifactId>com.zed.lurin.swagger.web</artifactId>
+                            <bundleFileName>com.zed.lurin.swagger.war</bundleFileName>
+                            <contextRoot>/swagger</contextRoot>
+                        </webModule>
+                 
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
